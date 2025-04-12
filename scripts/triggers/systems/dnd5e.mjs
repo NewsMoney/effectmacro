@@ -16,7 +16,7 @@ export class SystemDND5E {
     Hooks.on("dnd5e.damageActor", SystemDND5E.damageActor.bind("dnd5e.damageActor"));
 
     // Novo trigger
-    Hooks.on("dnd5e.preAttackRoll", SystemDND5E.preAttackRoll.bind("dnd5e.preAttackRoll"));
+    Hooks.on("dnd5e.preRollAttackV2", SystemDND5E.preRollAttack.bind("dnd5e.preRollAttackV2"));
   }
 
   /**
