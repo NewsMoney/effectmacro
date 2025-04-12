@@ -37,11 +37,28 @@ export class SystemDND5E {
   }
 
   // Nova função para o trigger Pre Attack Roll
-  static preAttackRoll(item, roll) {
+  static preAttackRoll(item, config) {
+    // Verifica se o item foi informado e se possui ator associado
     if (!item) return;
-    // Aqui usamos uma string para identificar este trigger
-    return SystemDND5E._filterAndCall(item.actor, this, {item, roll});
+    if (!item.actor) {
+      console.error("preAttackRoll: Item sem ator associado", item);
+      return;
+    }
+  
+    // Garante que config seja um objeto, mesmo que vazio, para evitar erros de acesso
+    config = config || {};
+  
+    // Se necessário, garanta a propriedade data (ou outras que os macros esperem)
+    // Exemplo: se os macros acessam config.data, podemos definir:
+    if (config.data === undefined) config.data = {};
+  
+    // Usa um identificador explícito para o hook
+    const hookIdentifier = "dnd5e.preRollAttack";
+  
+    // Chama os efeitos com o objeto de contexto adequado
+    return SystemDND5E._filterAndCall(item.actor, hookIdentifier, { item, config });
   }
+
 
   static rollAbilitySave(actor, roll, abilityId) {
     return SystemDND5E._filterAndCall(actor, this, {roll, abilityId});
