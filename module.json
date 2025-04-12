@@ -4,11 +4,7 @@
   "version": "AUTOMATIC",
   "authors": [
     {
-      "name": "Zhell",
-      "url": "https://github.com/krbz999",
-      "discord": "zhell9201",
-      "ko-fi": "https://ko-fi.com/zhell",
-      "patreon": "https://patreon.com/zhell"
+      "name": "News Money",
     }
   ],
   "compatibility": {"minimum": "12", "maximum": "12", "verified": "12"},
@@ -28,7 +24,7 @@
       "flags": {}
     }
   ],
-  "url": "https://github.com/krbz999/effectmacro",
-  "manifest": "https://github.com/krbz999/effectmacro/releases/latest/download/module.json",
+  "url": "https://github.com/newsmoney/effectmacro",
+  "manifest": "https://github.com/newsmoney/effectmacro/releases/latest/download/module.json",
   "download": "AUTOMATIC"
 }
