@@ -28,7 +28,7 @@
       "flags": {}
     }
   ],
-  "url": "https://github.com/NewsMoney/effectmacro",
+  "url": "https://github.com/newsmoney/effectmacro",
   "manifest": "https://raw.githubusercontent.com/NewsMoney/effectmacro/main/module.json",
   "download": "https://github.com/NewsMoney/effectmacro/archive/refs/heads/main.zip"
 }
