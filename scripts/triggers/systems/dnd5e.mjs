@@ -15,7 +15,7 @@ export class SystemDND5E {
     Hooks.on("dnd5e.healActor", SystemDND5E.healActor.bind("dnd5e.healActor"));
     Hooks.on("dnd5e.damageActor", SystemDND5E.damageActor.bind("dnd5e.damageActor"));
     // Adicionando o novo trigger "Pre Attack Roll"
-    Hooks.on("dnd5e.preRollAttack", SystemDND5E.preRollAttack.bind("dnd5e.preRollAttack"));
+    Hooks.on("dnd5e.preRollAttackV2", SystemDND5E.preRollAttack.bind("dnd5e.preRollAttackV2"));
   }
 
   /**
@@ -36,11 +36,15 @@ export class SystemDND5E {
     return SystemDND5E._filterAndCall(item.actor, this, {item, roll, ammoUpdate});
   }
 
-  static preRollAttack(item, data) {
-    if (!item || !item.actor) return;
-    data = data || {}; // Garante que data seja um objeto, mesmo que vazio
-    return SystemDND5E._filterAndCall(item.actor, "dnd5e.preRollAttack", { item, data });
+  static preRollAttackV2(workflow) {
+  if (!workflow?.item || !workflow?.actor) return;
+
+  return SystemDND5E._filterAndCall(workflow.actor, this, {
+    item: workflow.item,
+    workflow
+    });
   }
+
   
   static rollAbilitySave(actor, roll, abilityId) {
     return SystemDND5E._filterAndCall(actor, this, {roll, abilityId});
