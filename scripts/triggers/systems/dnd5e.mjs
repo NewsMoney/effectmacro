@@ -32,9 +32,10 @@ export class SystemDND5E {
     }
   }
 
-  static rollAttack(item, roll, ammoUpdate) {
-    if (!item) return;
-    return SystemDND5E._filterAndCall(item.actor, this, {item, roll, ammoUpdate});
+  static preRollAttack(config, dialog) {
+    const actor = config.actor ?? config.item?.actor;
+    if (!actor) return;
+    return SystemDND5E._filterAndCall(actor, this, { config, dialog });
   }
 
   static preAttackRoll(item, config) {
