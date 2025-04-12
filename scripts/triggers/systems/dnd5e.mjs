@@ -14,6 +14,9 @@ export class SystemDND5E {
     Hooks.on("dnd5e.rollToolCheck", SystemDND5E.rollToolCheck.bind("dnd5e.rollToolCheck"));
     Hooks.on("dnd5e.healActor", SystemDND5E.healActor.bind("dnd5e.healActor"));
     Hooks.on("dnd5e.damageActor", SystemDND5E.damageActor.bind("dnd5e.damageActor"));
+
+    // Novo trigger
+    Hooks.on("dnd5e.preAttackRoll", SystemDND5E.preAttackRoll.bind("dnd5e.preAttackRoll"));
   }
 
   /**
@@ -32,6 +35,11 @@ export class SystemDND5E {
   static rollAttack(item, roll, ammoUpdate) {
     if (!item) return;
     return SystemDND5E._filterAndCall(item.actor, this, {item, roll, ammoUpdate});
+  }
+
+  static preAttackRoll(item, config) {
+    if (!item) return;
+    return SystemDND5E._filterAndCall(item.actor, this, {item, config});
   }
 
   static rollAbilitySave(actor, roll, abilityId) {
