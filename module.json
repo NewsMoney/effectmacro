@@ -7,7 +7,11 @@
       "name": "News Money"
     }
   ],
-  "compatibility": {"minimum": "12", "maximum": "12", "verified": "12"},
+  "compatibility": {
+    "minimum": "12",
+    "maximum": "12",
+    "verified": "12"
+  },
   "esmodules": ["scripts/module.mjs"],
   "styles": ["styles/styles.css"],
   "languages": [
@@ -24,7 +28,7 @@
       "flags": {}
     }
   ],
-  "url": "https://github.com/newsmoney/effectmacro",
+  "url": "https://github.com/NewsMoney/effectmacro",
   "manifest": "https://raw.githubusercontent.com/NewsMoney/effectmacro/main/module.json",
-  "download": "https://raw.githubusercontent.com/NewsMoney/effectmacro/main/module.json"
+  "download": "https://github.com/NewsMoney/effectmacro/archive/refs/heads/main.zip"
 }
