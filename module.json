@@ -1,7 +1,7 @@
 {
   "id": "effectmacro",
   "title": "Effect Macro",
-  "version": "AUTOMATIC",
+  "version": "1.0.0",
   "authors": [
     {
       "name": "News Money"
@@ -26,5 +26,5 @@
   ],
   "url": "https://github.com/newsmoney/effectmacro",
   "manifest": "https://raw.githubusercontent.com/NewsMoney/effectmacro/main/module.json",
-  "download": "AUTOMATIC"
+  "download": "https://raw.githubusercontent.com/NewsMoney/effectmacro/main/module.json"
 }
