@@ -40,7 +40,7 @@ export class SystemDND5E {
   static preAttackRoll(item, roll) {
     if (!item) return;
     // Aqui usamos uma string para identificar este trigger
-    return SystemDND5E._filterAndCall(item.actor, "dnd5e.preAttackRoll", {item, roll});
+    return SystemDND5E._filterAndCall(item.actor, this, {item, roll});
   }
 
   static rollAbilitySave(actor, roll, abilityId) {
