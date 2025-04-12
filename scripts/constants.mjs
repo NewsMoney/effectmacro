@@ -32,7 +32,7 @@ export const TRIGGERS = {
     }
   ],
   dnd5e: [
-    "dnd5e.rollAttackV2",
+    "dnd5e.rollAttack",
     "dnd5e.preAttackRoll",
     "dnd5e.rollDamage",
     "dnd5e.rollAbilitySave",
