@@ -39,7 +39,7 @@ export class SystemDND5E {
   static preRollAttack(item, data) {
     if (!item || !item.actor) return;
     data = data || {}; // Garante que data seja um objeto, mesmo que vazio
-    return SystemDND5E._filterAndCall(item.actor, "dnd5e.preRollAttack", { item, data });
+    return SystemDND5E._filterAndCall(item.actor, this, { item, data });
   }
   
   static rollAbilitySave(actor, roll, abilityId) {
