@@ -27,7 +27,7 @@ async function _callMacro(type = "never", context = {}) {
   try {
     await fn.call(context, ...Object.values(variables));
   } catch (err) {
-    console.error(err);
+    console.log("Erro ao chamar o macro:",console.error(err););
     return null;
   }
 }
