@@ -6,7 +6,6 @@
   "EFFECTMACRO.dnd5e.rollAbilitySave": "On Saving Throws",
   "EFFECTMACRO.dnd5e.rollAbilityTest": "On Ability Checks",
   "EFFECTMACRO.dnd5e.rollAttack": "On Attack Rolls",
-  "EFFECTMACRO.dnd5e.preRollAttack": "On Pre Roll Attack",
   "EFFECTMACRO.dnd5e.rollDamage": "On Damage Rolls",
   "EFFECTMACRO.dnd5e.rollDeathSave": "On Death Saving Throws",
   "EFFECTMACRO.dnd5e.rollInitiative": "On Initiative Rolls",
